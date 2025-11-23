@@ -20,7 +20,5 @@ c5_assignment/
     mcp_osm_geo_server.py        # MCP server for OSM/Nominatim geocoding & POI search
     mcp_routing_tiles_server.py  # MCP server for OSRM routing + tile URL helpers
     agent_map_assistant.py       # OpenAI Agents SDK agent wired to both MCP servers
-  tests/
-    ...                          # (optional pytest tests)
   requirements.txt
   README.md
