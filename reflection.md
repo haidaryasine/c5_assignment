@@ -1,0 +1,5 @@
+During this assignment I learned how MCP cleanly separates the concerns of exposing tools from orchestrating them. Implementing two small map servers forced me to think in terms of capabilities (geocode, route, tiles) with clear schemas instead of monolithic APIs. Wiring them into the OpenAI Agents SDK via MCPServerStreamableHttp was surprisingly straightforward once the servers respected MCP conventions.
+
+The main challenges were understanding the different transports, complying with external service policies (like Nominatim’s headers and rate limits), and deciding which operations belonged in which server. I also noticed trade-offs: OSRM and public OSM services are easy to use but not always production-grade for heavy traffic, so a real system would need self-hosted infrastructure and stronger observability.
+
+Overall, I now see MCP as a powerful abstraction for building agentic applications. Instead of baking map logic into the agent, I can evolve each MCP server independently and plug them into other clients in the future, such as IDEs or different agent frameworks, without rewriting integrations.
